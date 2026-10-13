@@ -2,13 +2,36 @@
 
 Compass is a local-first operating system for a focused job search. It helps you decide which companies deserve attention, find the people who can give you an honest read, track live opportunities, and make the next action obvious.
 
-This repository is a build kit, not a hosted service and not a copy of anyone else's career data. You will use Claude Code to build a version around your own rubric, workflow, and privacy boundaries.
+This repository is a build kit, not a hosted service and not a copy of anyone else's career data. Point Claude Code, Codex, or another capable coding harness at the repository and have it build a version around your own rubric, workflow, and privacy boundaries.
+
+## Fastest start: give the repository to your AI harness
+
+Send your coding harness this repository URL:
+
+```text
+https://github.com/projectwong/compass-job-search
+```
+
+Then use this prompt:
+
+```text
+Use this repository as the product specification for my own Compass job-search system.
+Clone it, read AGENTS.md, README.md, docs/privacy.md, and docs/build-log.md, then
+work through the numbered phases in order. Keep all of my real career data outside
+the repository. Start by helping me define my rubric and acceptance checks. Do not
+build a dashboard until the file-based daily and weekly workflows work. Treat
+first-party job-board ingestion as a core capability, but do not scrape authenticated
+sites, send messages, or submit applications. At the end of each phase, run its
+checks, show me what changed, and wait for my approval before continuing.
+```
+
+The harness should treat [`AGENTS.md`](AGENTS.md) as its operating instructions. Claude Code can also use [`CLAUDE.md`](CLAUDE.md), which carries the same product and privacy constraints.
 
 ## Start here
 
 1. Read [the build log](docs/build-log.md).
 2. Create an empty private data directory outside this repository.
-3. Open this repository in Claude Code.
+3. Open this repository in your coding harness.
 4. Run the prompts in `prompts/` in numerical order.
 5. Do not build the dashboard until the Markdown workflow has survived two weekly reviews.
 
