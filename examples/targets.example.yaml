@@ -1,0 +1,15 @@
+companies:
+  - name: Northstar Systems
+    domain: northstar.example
+    reason: Builds scheduling software for field maintenance teams.
+    source: Synthetic example created for this repository.
+    observed_on: 2026-01-15
+    status: active
+    aliases: [Northstar]
+  - name: Cedar Labs
+    domain: cedar.example
+    reason: Appears to have a relevant product problem, but its work model is unknown.
+    source: Synthetic example created for this repository.
+    observed_on: 2026-01-15
+    status: active
+    aliases: []

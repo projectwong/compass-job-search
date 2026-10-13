@@ -1,0 +1,24 @@
+version: 1
+objective: Find a product role with a real build mandate and a sustainable working model.
+hard_constraints:
+  - id: work_authorization
+    question: Is the employment arrangement legally workable?
+    unknown_behavior: block_until_verified
+  - id: work_model
+    question: Does the role support the candidate's stated location constraint?
+    unknown_behavior: investigate
+preferences:
+  company:
+    - id: problem_importance
+      weight: 5
+      positive_evidence: The product solves a costly, frequent problem for a clearly named user.
+      negative_evidence: The stated mission does not match how the company earns revenue.
+  role:
+    - id: build_mandate
+      weight: 5
+      positive_evidence: The role owns a new product, market, or operating capability.
+      negative_evidence: The role mainly maintains a fixed roadmap.
+forbidden_inferences:
+  - A resume title does not define the title the candidate wants next.
+  - A company careers page does not prove a specific role is still open.
+  - A contact's old employer does not create a current warm path.
